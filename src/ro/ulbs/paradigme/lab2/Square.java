@@ -17,7 +17,12 @@ public class Square extends Form {
     }
 
     @Override
+    public String getColor() {
+        return "pink";
+    }
+
+    @Override
     public String toString() {
-        return "Square: side = " + side + "color = " + getColor();
+        return "Square: side = " + side + "  color = " + getColor();
     }
 }

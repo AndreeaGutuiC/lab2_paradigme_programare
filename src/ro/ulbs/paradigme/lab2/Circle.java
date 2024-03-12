@@ -17,7 +17,12 @@ public class Circle extends Form{
     }
 
     @Override
+    public String getColor() {
+        return "red";
+    }
+
+    @Override
     public String toString() {
-        return super.toString();
+        return "Circle: radius = " + radius + "  color = " + getColor();
     }
 }

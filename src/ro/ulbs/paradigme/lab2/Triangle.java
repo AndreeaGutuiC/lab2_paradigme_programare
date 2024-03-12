@@ -21,26 +21,33 @@ public class Triangle extends Form{
 
     @Override
     public String toString() {
-        return super.toString();
+
+        return "Triangle: base = " + base + "  color = " + getColor();
     }
 
     @Override
     public boolean equals(Object obj) {
-        if(!(obj instanceof Triangle)){
+        if (!(obj instanceof Triangle)) {
             return false;
         }
 
         Triangle tri = (Triangle) obj;
         boolean colorEqual = false;
-        if(this.getColor() == null && tri.getColor() == null){
+        if (this.getColor() == null && tri.getColor() == null) {
             colorEqual = true;
-        }else
-            if(this.getColor() != null && tri.getColor() != null && this.getColor().compareTo(tri.getColor())==0){
+        } else if (this.getColor() != null && tri.getColor() != null && this.getColor().compareTo(tri.getColor()) == 0) {
+            colorEqual = true;
 
-            }
+        }
+
+        if (this.height == tri.height && this.base == tri.base && colorEqual) {
+            return true;
+        } else {
             return false;
-
+        }
     }
 
-
 }
+
+
+
